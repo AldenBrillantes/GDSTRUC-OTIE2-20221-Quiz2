@@ -4,7 +4,6 @@ public class PlayerLinkedList {
     private PlayerNode head;
     private int size = 0;
 
-    // function to add a new player to the front of the linked list
     public void addToFront(Player player) {
         PlayerNode playerNode = new PlayerNode(player);
         playerNode.setNextPlayer(head);
@@ -13,14 +12,12 @@ public class PlayerLinkedList {
 
     }
 
-    //Removes the first player
     public void removeFront() {
         head = head.getNextPlayer();
         head.setPreviousPlayer(null);
         size--;
     }
 
-    // function to check if the linked list contains the given object
     public boolean contains(Player player) {
         PlayerNode current = head;
 
@@ -54,7 +51,6 @@ public class PlayerLinkedList {
 
 
 
-    // function to print the elements of the linked list
     public void printList() {
 
         System.out.print("HEAD -> ");
